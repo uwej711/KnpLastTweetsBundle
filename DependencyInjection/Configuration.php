@@ -17,6 +17,7 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->scalarNode('proxy')->defaultValue('null')->end()
                 ->arrayNode('fetcher')
                 ->treatNullLike(array('driver' => 'api'))
                 ->treatTrueLike(array('driver' => 'api'))

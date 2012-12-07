@@ -32,6 +32,11 @@ class KnpLastTweetsExtension extends Extension
             $loader->load('buzz.yml');
         }
 
+        if (null !== $config['proxy']) {
+            $definition = $container->getDefinition('buzz.client');
+            $definition->addMethodCall('setProxy', array($config['proxy']));
+        }
+
         // Load the good fetcher driver
         $fetcherConfig = isset($config['fetcher']) ? $config['fetcher'] : array();
 

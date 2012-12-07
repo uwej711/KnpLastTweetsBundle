@@ -1,6 +1,6 @@
 services:
     buzz.message_factory:
-        class: Buzz\Message\Factory\Factory
+        class: Buzz\Message\Factory
         public: false
 
     buzz.client:
