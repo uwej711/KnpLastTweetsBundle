@@ -40,7 +40,7 @@ class ApiFetcher implements FetcherInterface
                 $parameters = array(
                     'screen_name' => urlencode($username),
                     'count' => $count,
-                    'trim_user' => 1,
+                    'trim_user' => 0,
                     'exclude_replies' => (int) $excludeReplies,
                     'include_rts' => (int) $includeRts,
                     'page' => $page

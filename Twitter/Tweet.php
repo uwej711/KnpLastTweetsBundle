@@ -10,6 +10,7 @@ class Tweet
     protected $username;
     protected $isReply;
     protected $isRetweet;
+    protected $profileImageUrl;
 
     public function __construct(array $object)
     {
@@ -19,6 +20,7 @@ class Tweet
         $this->username = $object['username'];
         $this->isReply = isset($object['in_reply_to_screen_name']);
         $this->isRetweet = isset($object['retweeted_status']);
+        $this->profileImageUrl = $object['user']['profile_image_url'];
     }
 
     public function getText()
@@ -59,5 +61,10 @@ class Tweet
     public function isRetweet()
     {
         return $this->isRetweet;
+    }
+
+    public function getProfileImageUrl()
+    {
+        return $this->profileImageUrl;
     }
 }

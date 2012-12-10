@@ -2,6 +2,7 @@
     {% if tweets %}
         <ul>
         {% for tweet in tweets %}
+            <img src="{{ tweet.profileImageUrl }}" alt="{{ tweet.username }}" />
             <li>{{ tweet.text|knp_tweet_urlize }}</li>
         {% endfor %}
         </ul>
