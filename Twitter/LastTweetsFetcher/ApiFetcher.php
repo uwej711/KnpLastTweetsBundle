@@ -6,7 +6,6 @@ use Knp\Bundle\LastTweetsBundle\Twitter\Exception\TwitterException;
 use Knp\Bundle\LastTweetsBundle\Twitter\Tweet;
 
 use Buzz\Browser;
-use Buzz\Browser\Message\Response;
 
 class ApiFetcher implements FetcherInterface
 {
