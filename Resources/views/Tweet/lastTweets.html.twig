@@ -3,7 +3,7 @@
         <ul>
         {% for tweet in tweets %}
 
-            <li><img src="{{ tweet.profileImageUrl }}" alt="{{ tweet.username }}" />{{ tweet.text|knp_tweet_urlize }}</li>
+            <li><img src="{{ tweet.profileImageUrl }}" alt="{{ tweet.username }}" />{{ tweet.text | raw | knp_tweet_urlize }}</li>
         {% endfor %}
         </ul>
     {% else %}
