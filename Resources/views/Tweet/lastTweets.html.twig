@@ -1,10 +1,12 @@
 <section class="knp_last_tweets">
     {% if tweets %}
         <ul>
-        {% for tweet in tweets %}
-
-            <li><img src="{{ tweet.profileImageUrl }}" alt="{{ tweet.username }}" />{{ tweet.text | raw | knp_tweet_urlize }}</li>
-        {% endfor %}
+            {% for tweet in tweets %}
+                <li class="clearfix">
+                    <img src="{{ tweet.profileImageUrl }}" alt="{{ tweet.username }}" />
+                    <p>{{ tweet.text | raw | knp_tweet_urlize }}</p>
+                </li>
+            {% endfor %}
         </ul>
     {% else %}
         No tweets
